@@ -130,6 +130,16 @@ def main():
     print_line("•")
     print(P+BOLD+"V O C A B U L A R Y  B U I L D E R".center(int(os.popen('stty size', 'r').read().split()[1]))+W)
     print_line("•")
+    print('''
+Menu Controls :
+
+    1.Y or y to choose/change Deck (default)
+    2.N or n to Exit the program
+
+Note : 
+• For most of the input prompt the default input is hilighted in upper case. 
+• Press the <Enter> to skip typing and use default values at the same time  
+    ''')
     menu()
     review()
     global Deck, Unknown
