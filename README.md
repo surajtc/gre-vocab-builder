@@ -29,10 +29,10 @@ Cheers! Happy Learning :tada:
 
 ## Screenshots
 
-* #### Main Menu (left), Deck Selection (right)
+* **Main Menu (left), Deck Selection (right)**
 
 ![menu image](Screenshots/Screenshot_Menu.png)
 
-* #### Reviewing Vocabulary Words
+* **Reviewing Vocabulary Words**
 
 ![review image](Screenshots/Screenshot_Review.png)
