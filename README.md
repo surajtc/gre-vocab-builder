@@ -28,3 +28,11 @@ Cheers! Happy Learning :tada:
 ## Todo
 
 ## Screenshots
+
+* #### Main Menu (left), Deck Selection (right)
+
+![menu image](Screenshots/Screenshot_Menu.png)
+
+* #### Reviewing Vocabulary Words
+
+![review image](Screenshots/Screenshot_Review.png)
