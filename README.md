@@ -27,6 +27,9 @@ Cheers! Happy Learning :tada:
 
 ## Todo
 
+- [ ] Menu Navigation
+- [ ] Quiz Interface
+
 ## Screenshots
 
 * **Main Menu (left), Deck Selection (right)**
