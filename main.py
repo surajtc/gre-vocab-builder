@@ -75,12 +75,12 @@ def review():
     print_line("•")
     print(P+BOLD+"REVIEWING " + Deck.split('.')[0] + " :"+W)
     print_line("•")
-
+    review_meaning=0
     with open(Path+Deck) as csvfile:
         csvreader=csv.reader(csvfile)
         flag=None
         for index,row in enumerate(csvreader, start=1):
-            print(O+BOLD+row[0].capitalize()+W)
+            print(O+BOLD+row[review_meaning].capitalize()+W)
             print()
             flag=input(B+"Know This? (Y/n) :"+W)
             if len(flag) == 0 or flag.strip().lower() == 'y':
