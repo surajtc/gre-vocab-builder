@@ -35,8 +35,8 @@ Cheers! Happy Learning :tada:
 
 * The Vocabulary List used in this project is sourced from [Greg Mat's Vocabulary List (900 words)](https://gregmatapi.s3.amazonaws.com/media/misc/files/gregmat_wordlist.pdf).
 
-Thank you Greg Mat :simple_smile:.
-For more information checkout [gregmat.com](https://www.gregmat.com/).
+Thank you Greg Mat 🙂
+, For more information checkout [gregmat.com](https://www.gregmat.com/).
 
 ## Screenshots
 
