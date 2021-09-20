@@ -1,0 +1,203 @@
+@import "color";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+// a, a:hover, a:focus, a:active {
+//   text-decoration: none;
+//   color: inherit;
+// }
+body{
+  font-family: 'Roboto', sans-serif;
+
+  background-color: $Dark04;
+
+}
+.topbar{
+  width: calc(100% - .5em);
+  margin: .25em;
+  max-height: 3em;
+  min-height: 3em;
+  background-color: $Dark04;
+  border-bottom: .1em solid $Accent02;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4{
+    display: inline-block;
+    color: $Ext_Y;
+    &:nth-child(2){
+      color: $Ext_G;
+    }
+    &:nth-child(3){
+      color: $Ext_R;
+    }
+    &:nth-child(4){
+      color: $Light01;
+    }
+
+    text-align: center;
+    background-color: $Dark01;
+    padding: .25em;
+    border-radius: 50%;
+    margin-inline: .25em;
+  }
+  .deck{
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    color: darken($color: $Light01, $amount: 35%);
+
+    p{
+      font-weight: bold;
+      color: $Light01;
+    }
+
+    button{
+      color: inherit;
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size: 1.5rem;
+
+      border: none;
+      background-color: $Dark01;
+      padding: 0 .2em;
+      border-radius: 50%;
+      line-height: 1;
+    &:hover{
+      color: $Ext_Y;
+    }
+
+    }
+    
+  }
+}
+.cards{
+  // background-color: green;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  // flex-grow: 1;
+  gap: .5em;
+  margin: .25em;
+  &__card{
+    // color: blue;
+    // background-color: blueviolet;
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 12em;
+    max-width: 16em;
+    flex-grow: 1;
+    // width: 14em;
+    overflow: hidden;
+    // border: 2px solid black;
+
+    &__context{
+      position: relative;
+      background-color: $Dark03;
+      color: $Light02;
+      transition: border 100ms ease-out;
+      border-top: .2em solid $Ext_Y;
+      // border-bottom: .2em solid gold;
+      min-height: 6em;
+      padding: .5em 0;
+      z-index: 1;
+      // opacity: .5;
+      border-radius: .5em;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      h3,p{
+        text-align: center;
+        color: $Ext_Y;
+        // visibility: hidden;
+      }
+      p{
+        text-align:center;
+        padding: .5em .25em 0 .25em;
+        color: $Light01;
+        display: none;
+        cursor:default;
+        max-width: 12em;
+      }
+      h4{
+        position: absolute;
+        padding: .2em;
+        top: 0;
+        left: 0;
+        color: darken($color: $Light01, $amount: 35%);
+        opacity: .5;
+      }
+      span{
+        display: none;
+      }
+    }
+    &__button{
+
+      border-bottom-left-radius: .5em;
+      border-bottom-right-radius: .5em;
+      // opacity: .5;
+      // border-bottom: .2em solid $Dark04;
+
+      height: 3em;
+      transform: translateY(-1em);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      overflow: hidden;
+      button{
+        border: none;
+        font-family: inherit;
+        background-color: darken($color: $Light01, $amount: 35%);
+        color: $Dark04;
+        cursor: pointer;
+        // background-color: $Ext_R;
+        // &:first-child{
+        // // color: $Ext_G;
+        // // background-color: $Ext_G;
+
+        // }
+        // color: $Ext_G;
+        // &:first-child{
+        //   color: $Ext_R;
+        // }
+        &:first-child{
+          border-right: .05em solid $Dark03;
+        }
+        &:last-child{
+          border-left: .05em solid $Dark03;
+        }
+        width: 50%;
+        height: 3em;
+        padding-top: 1em;
+        font-size: 1rem;
+        text-align: center;
+        transition: background-color 100ms ease-out;
+
+        &:hover{
+          color: $Dark04;
+          &:first-child{
+            background-color: $Ext_G;
+          }
+          background-color: $Ext_R;
+        }
+        &:active{
+          filter: brightness(.8);
+        }
+      }
+
+    }
+  }
+}
+
+.template{
+  display: none;
+}
