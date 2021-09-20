@@ -1,5 +1,5 @@
 const FolderPath = "Decks/"
-const MaxDeckNumber = 5
+const MaxDeckNumber = 10
 
 var Deck = {}
 var DeckNumber = 01
