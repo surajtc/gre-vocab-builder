@@ -1,5 +1,5 @@
 const FolderPath = "Decks/"
-const MaxDeckNumber = 10
+const MaxDeckNumber = 30
 
 var Deck = {}
 var DeckNumber = 01
@@ -25,6 +25,15 @@ function updateStats() {
     }
   }
   // console.log(newWord, knownWord, unknownWord)
+  document.querySelector(".topbar").style.borderColor =
+    newWord >= knownWord
+      ? newWord >= unknownWord
+        ? "#EBCB8B"
+        : "#BF616A"
+      : knownWord >= unknownWord
+      ? "#A3BE8C"
+      : "#BF616A"
+  // console.log(clr)
   stats.children[0].innerHTML = String(newWord).padStart(2, "0")
   stats.children[1].innerHTML = String(knownWord).padStart(2, "0")
   stats.children[2].innerHTML = String(unknownWord).padStart(2, "0")
@@ -40,6 +49,17 @@ function show(elem, color, know) {
   parent.querySelector("span").innerHTML = know
 
   updateStats()
+}
+
+function toggleView(head) {
+  cards = document.querySelector("#cards").querySelectorAll("p")
+
+  let style = head.innerHTML == "show" ? "block" : "none"
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].style.display = style
+  }
+
+  head.innerHTML = head.innerHTML == "show" ? "hide" : "show"
 }
 
 function hide(elem) {
@@ -64,7 +84,7 @@ function changeDeck(pos = 0) {
     document.querySelector(".btn-left").style.visibility = "visible"
     document.querySelector(".btn-right").style.visibility = "visible"
   }
-
+  document.querySelector(".topbar").style.borderColor = "#EBCB8B"
   statsWrap = document.querySelector(".stats")
   stats = statsWrap.querySelectorAll("h4")
   for (var i = 0; i < stats.length; i++) {

@@ -17,18 +17,23 @@ body{
 
 }
 .topbar{
-  width: calc(100% - .5em);
-  margin: .25em;
+  width: 100%;
+  // width: calc(100% - .5em);
+  // margin: .25em;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
   max-height: 3em;
   min-height: 3em;
   background-color: $Dark04;
-  border-bottom: .1em solid $Accent02;
+  border-bottom: .175em solid $Ext_Y;
+  transition: border 400ms ease-in-out;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
+.stats{
   h4{
     display: inline-block;
     color: $Ext_Y;
@@ -48,15 +53,31 @@ body{
     border-radius: 50%;
     margin-inline: .25em;
   }
+}
+.options{
+  h4{
+    color: $Accent03;
+    font-weight: normal;
+    background-color: $Dark01;
+    padding: .25em .5em;
+    border-radius: .5em;
+
+    &:hover{
+      color: $Ext_Y;
+      cursor: pointer;
+    }
+  }
+}
   .deck{
     display: flex;
     gap: .5em;
+    padding: 0 .25em;
     align-items: center;
     color: darken($color: $Light01, $amount: 35%);
 
     p{
       font-weight: bold;
-      color: $Light01;
+      color: $Accent03;
     }
 
     button{
@@ -86,6 +107,7 @@ body{
   // flex-grow: 1;
   gap: .5em;
   margin: .25em;
+  padding-top: 1em;
   &__card{
     // color: blue;
     // background-color: blueviolet;
@@ -107,8 +129,9 @@ body{
       // border-bottom: .2em solid gold;
       min-height: 6em;
       padding: .5em 0;
-      z-index: 1;
+      // z-index: 0;
       // opacity: .5;
+      z-index: 1;
       border-radius: .5em;
       display: flex;
       flex-flow: column nowrap;
@@ -146,7 +169,6 @@ body{
       border-bottom-right-radius: .5em;
       // opacity: .5;
       // border-bottom: .2em solid $Dark04;
-
       height: 3em;
       transform: translateY(-1em);
       display: flex;
