@@ -4,6 +4,9 @@ const MaxDeckNumber = 30
 var Deck = {}
 var DeckNumber = 01
 
+var OnlyRed = false
+var VisibleAll = false
+
 function updateStats() {
   stats = document.querySelector(".stats")
   // console.log(stats)
@@ -48,19 +51,24 @@ function show(elem, color, know) {
 
   parent.querySelector("span").innerHTML = know
 
+  // console.log(parent.querySelector("h3").innerHTML)
+  if (OnlyRed && know == 1) {
+    setTimeout(() => (parent.style.display = "none"), 500)
+  }
+
   updateStats()
 }
 
-function toggleView(head) {
-  cards = document.querySelector("#cards").querySelectorAll("p")
+// function toggleView(head) {
+//   cards = document.querySelector("#cards").querySelectorAll("p")
 
-  let style = head.innerHTML == "show" ? "block" : "none"
-  for (var i = 0; i < cards.length; i++) {
-    cards[i].style.display = style
-  }
+//   let style = head.innerHTML == "show" ? "block" : "none"
+//   for (var i = 0; i < cards.length; i++) {
+//     cards[i].style.display = style
+//   }
 
-  head.innerHTML = head.innerHTML == "show" ? "hide" : "show"
-}
+//   head.innerHTML = head.innerHTML == "show" ? "hide" : "show"
+// }
 
 function hide(elem) {
   elem.style.display = "none"
@@ -85,6 +93,7 @@ function changeDeck(pos = 0) {
     document.querySelector(".btn-right").style.visibility = "visible"
   }
   document.querySelector(".topbar").style.borderColor = "#EBCB8B"
+
   statsWrap = document.querySelector(".stats")
   stats = statsWrap.querySelectorAll("h4")
   for (var i = 0; i < stats.length; i++) {
@@ -135,9 +144,58 @@ function changeDeck(pos = 0) {
       }
       // cardTemplate.style.display = "none"
     })
+
+  setTimeout(() => {
+    document.querySelector("#show").click()
+    document.querySelector("#show").click()
+    document.querySelector("#onlyred").click()
+    document.querySelector("#onlyred").click()
+  }, 100)
+
+  // if (VisibleAll) {
+  //   document.querySelector("#show").click()
+  //   // document.querySelector("#show").click()
+  // }
+  // if (OnlyRed) {
+  //   document.querySelector("#onlyred").click()
+  // }
 }
 
 changeDeck()
+
+document.querySelector("#show").addEventListener("click", (e) => {
+  e.target.classList.toggle("white")
+  VisibleAll = !VisibleAll
+  // console.log(e.target.classList.contains("white"))
+  cards = document.querySelector("#cards").querySelectorAll("p")
+
+  let style = e.target.classList.contains("white") ? "block" : "none"
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].style.display = style
+  }
+})
+document.querySelector("#reload").addEventListener("click", () => {
+  // e.target.classList.toggle("yellow")
+  // console.log("reload")
+
+  changeDeck()
+})
+document.querySelector("#onlyred").addEventListener("click", (e) => {
+  // console.log("onlyred")
+  e.target.classList.toggle("red")
+  let style = e.target.classList.contains("red") ? "none" : "flex"
+  OnlyRed = !OnlyRed
+  // console.log(OnlyRed)
+
+  cards = document.querySelector("#cards").querySelectorAll(".cards__card")
+  // console.log(cards[1].querySelector("span").innerHTML)
+  // cards[1].style.display = "none"
+  for (var i = 0; i < cards.length; i++) {
+    if (cards[i].querySelector("span").innerHTML == 1) {
+      cards[i].style.display = style
+    }
+  }
+})
 // var fs = require("fs")
 // list = fs.readdir("/resources")
 // console.log(list)

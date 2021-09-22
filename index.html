@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="static/css/main.min.css">
-    
+    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <title>Vocabulary Builder</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-
-        <div class="template">
-            <div class="cards__card">
-                <div class="cards__card__context">
-                    <h4></h4>
-                    <h3></h3>
-                    <p onclick="hide(this)"></p>
-                    <span> -1 </span>
-                </div>
-                <div class="cards__card__button">
-                    <button onclick="show(this, '#A3BE8C', 1)">Know</button>
-                    <button onclick="show(this, '#BF616A', 0)">Don't Know</button>
-                </div>
-            </div>
+      <!-- CARD TEMPLATE -->
+      <div class="template">
+        <div class="cards__card">
+          <div class="cards__card__context">
+            <h4></h4>
+            <h3></h3>
+            <p onclick="hide(this)"></p>
+            <span> -1 </span>
+          </div>
+          <div class="cards__card__button">
+            <button onclick="show(this, '#A3BE8C', 1)">Know</button>
+            <button onclick="show(this, '#BF616A', 0)">Don't Know</button>
+          </div>
         </div>
-
+      </div>
     </header>
     <main>
-        <section class="topbar">
+      <!-- TOPBAR -->
+      <section class="topbar">
+          <div class="menu">
+            <i class="ri-menu-fill"></i>
+          </div>
+        <div class="stats">
+          <h4>12</h4>
+          <h4>12</h4>
+          <h4>06</h4>
+          <h4>30</h4>
+        </div>
 
-            <div class="deck">
-                <button class="btn-left" onclick="changeDeck(-1)"> < </button>
-                <p class="deck__name"></p>
-                <button class="btn-right" onclick="changeDeck(1)"> > </button>
-            </div>
-            <div class="options">
-                <h4 onclick="toggleView(this)">show</h4>
-            </div>
-            <div class="stats">
-                <h4>12</h4>
-                <h4>12</h4>
-                <h4>06</h4>
-                <h4>30</h4>
-            </div>
-        </section>
-        <section class="cards" id="cards">
-
-            <!-- <div class="cards__card">
-                <div class="cards__card__context">
-                    <h4></h4>
-                    <h3></h3>
-                    <p onclick="hide(this)"></p>
-                </div>
-
-                <div class="cards__card__button">
-                    <button onclick="show(this, '#A3BE8C')">Know</button>
-                    <button onclick="show(this, '#BF616A')">Don't Know</button>
-                </div>
-            </div> -->
-
-        </section>
-        <!-- <input id="myfiles" type="file" multiple> -->
+        <div class="deck">
+          <button class="btn-left" onclick="changeDeck(-1)">
+            <i class="ri-arrow-left-s-fill"></i>
+          </button>
+          <p class="deck__name"></p>
+          <button class="btn-right" onclick="changeDeck(1)">
+            <i class="ri-arrow-right-s-fill"></i>
+          </button>
+        </div>
+      </section>
+      <!-- CARDS -->
+      <section class="cards" id="cards"></section>
+      <!-- BOTTOM TOOLBAR -->
+      <section class="toolbar">
+        <i class="ri-chat-delete-fill" id="onlyred"></i>
+        <i class="ri-eye-fill" id="show"></i>
+        <i class="ri-restart-fill" id="reload"></i>
+      </section>
     </main>
 
-
     <script src="static/main.js"></script>
-</body>
+  </body>
 </html>

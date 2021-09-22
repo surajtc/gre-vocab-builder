@@ -1,6 +1,6 @@
 @import "color";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,22 +10,22 @@
 //   text-decoration: none;
 //   color: inherit;
 // }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 
   background-color: $Dark04;
-
 }
-.topbar{
+.topbar {
   width: 100%;
+  padding: 0 2%;
   // width: calc(100% - .5em);
   // margin: .25em;
-  border-bottom-left-radius: .5em;
-  border-bottom-right-radius: .5em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   max-height: 3em;
   min-height: 3em;
   background-color: $Dark04;
-  border-bottom: .175em solid $Ext_Y;
+  border-bottom: 0.175em solid $Ext_Y;
   transition: border 400ms ease-in-out;
   position: sticky;
   top: 0;
@@ -33,82 +33,87 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-.stats{
-  h4{
-    display: inline-block;
-    color: $Ext_Y;
-    &:nth-child(2){
-      color: $Ext_G;
-    }
-    &:nth-child(3){
-      color: $Ext_R;
-    }
-    &:nth-child(4){
+  .menu{
+    min-width: 32%;
+    display: flex;
+    justify-content: flex-start;
+    i{
+      font-size: 1.5rem;
       color: $Light01;
     }
-
-    text-align: center;
-    background-color: $Dark01;
-    padding: .25em;
-    border-radius: 50%;
-    margin-inline: .25em;
   }
-}
-.options{
-  h4{
-    color: $Accent03;
-    font-weight: normal;
-    background-color: $Dark01;
-    padding: .25em .5em;
-    border-radius: .5em;
+  .stats {
+    min-width: 32%;
+    display: flex;
+    justify-content: center;
 
-    &:hover{
+    h4 {
+      display: inline-block;
       color: $Ext_Y;
-      cursor: pointer;
+      &:nth-child(2) {
+        color: $Ext_G;
+      }
+      &:nth-child(3) {
+        color: $Ext_R;
+      }
+      &:nth-child(4) {
+        color: $Light01;
+      }
+
+      text-align: center;
+      background-color: $Dark01;
+      padding: 0.25em;
+      border-radius: 50%;
+      margin-inline: 0.25em;
     }
   }
-}
-  .deck{
+  .deck {
+    min-width: 32%;
+justify-content: flex-end;
     display: flex;
-    gap: .5em;
-    padding: 0 .25em;
+    // gap: 0.5em;
+    // padding: 0 0.25em;
     align-items: center;
     color: darken($color: $Light01, $amount: 35%);
 
-    p{
+    p {
       font-weight: bold;
       color: $Accent03;
     }
 
-    button{
+    button {
       color: inherit;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 1.5rem;
+      // font-weight: bold;
+      // font-family: sans-serif;
+      // font-size: 1.5rem;
 
       border: none;
-      background-color: $Dark01;
-      padding: 0 .2em;
-      border-radius: 50%;
-      line-height: 1;
-    &:hover{
-      color: $Ext_Y;
-    }
+      background-color: transparent;
+      // padding: 0 0.2em;
+      // border-radius: 1rem;
+      // line-height: 1;
+      &:hover {
+        color: $Ext_Y;
+        cursor: pointer;
+      }
 
+      i{
+        font-size: 2rem;
+      }
     }
-    
   }
 }
-.cards{
+.cards {
   // background-color: green;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   // flex-grow: 1;
-  gap: .5em;
-  margin: .25em;
+  gap: 0.5em;
+  margin: 0.25em;
   padding-top: 1em;
-  &__card{
+  padding-bottom: 2.5em;
+  &__card {
     // color: blue;
     // background-color: blueviolet;
     display: flex;
@@ -120,53 +125,53 @@ body{
     overflow: hidden;
     // border: 2px solid black;
 
-    &__context{
+    &__context {
       position: relative;
       background-color: $Dark03;
       color: $Light02;
       transition: border 100ms ease-out;
-      border-top: .2em solid $Ext_Y;
+      border-top: 0.2em solid $Ext_Y;
       // border-bottom: .2em solid gold;
       min-height: 6em;
-      padding: .5em 0;
+      padding: 0.5em 0;
       // z-index: 0;
       // opacity: .5;
       z-index: 1;
-      border-radius: .5em;
+      border-radius: 0.5em;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
 
-      h3,p{
+      h3,
+      p {
         text-align: center;
         color: $Ext_Y;
         // visibility: hidden;
       }
-      p{
-        text-align:center;
-        padding: .5em .25em 0 .25em;
+      p {
+        text-align: center;
+        padding: 0.5em 0.25em 0 0.25em;
         color: $Light01;
         display: none;
-        cursor:default;
+        cursor: default;
         max-width: 12em;
       }
-      h4{
+      h4 {
         position: absolute;
-        padding: .2em;
+        padding: 0.2em;
         top: 0;
         left: 0;
         color: darken($color: $Light01, $amount: 35%);
-        opacity: .5;
+        opacity: 0.5;
       }
-      span{
+      span {
         display: none;
       }
     }
-    &__button{
-
-      border-bottom-left-radius: .5em;
-      border-bottom-right-radius: .5em;
+    &__button {
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
       // opacity: .5;
       // border-bottom: .2em solid $Dark04;
       height: 3em;
@@ -175,7 +180,7 @@ body{
       justify-content: space-evenly;
       align-items: flex-end;
       overflow: hidden;
-      button{
+      button {
         border: none;
         font-family: inherit;
         background-color: darken($color: $Light01, $amount: 35%);
@@ -191,11 +196,11 @@ body{
         // &:first-child{
         //   color: $Ext_R;
         // }
-        &:first-child{
-          border-right: .05em solid $Dark03;
+        &:first-child {
+          border-right: 0.05em solid $Dark03;
         }
-        &:last-child{
-          border-left: .05em solid $Dark03;
+        &:last-child {
+          border-left: 0.05em solid $Dark03;
         }
         width: 50%;
         height: 3em;
@@ -204,22 +209,67 @@ body{
         text-align: center;
         transition: background-color 100ms ease-out;
 
-        &:hover{
+        &:hover {
           color: $Dark04;
-          &:first-child{
+          &:first-child {
             background-color: $Ext_G;
           }
           background-color: $Ext_R;
         }
-        &:active{
-          filter: brightness(.8);
+        &:active {
+          filter: brightness(0.8);
         }
       }
+    }
+  }
+}
+.toolbar {
+  max-width: 60%;
+  // min-width: 30%;
+  min-height: 2em;
+  max-height: fit-content;
+  background-color: $Dark01;
+  left: 50%;
+  padding: 0.2em .4em;
+  transform: translateX(-50%);
+  // border-bottom: .1em solid $Ext_Y;
+  bottom: 0.5em;
+  border-radius: 1em;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5em;
+  color: darken($color: $Light01, $amount: 35%);
 
+  i {
+    font-size: 1.25rem;
+    padding: 0.2em;
+    border-radius: 50%;
+    // background-color: gray;
+    transition: background-color 200ms ease-out;
+    &:hover{
+      background-color: $Dark04;
+      cursor: pointer;
+      &:last-child{
+        color: $Ext_O;
+      }
+    }
+    &:active{
+      &:last-child{
+        color: $Ext_Y;
+      }
     }
   }
 }
 
-.template{
+.white{
+  color: $Light01;
+}
+.red{
+  color: $Ext_R;
+}
+.template {
   display: none;
 }
