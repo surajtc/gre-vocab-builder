@@ -130,7 +130,7 @@ function changeDeck(pos = 0) {
       let count = 1
       // console.log(statsWrap.children[1], Object.keys(Deck).length)
       statsWrap.firstElementChild.innerHTML = Object.keys(Deck).length
-      statsWrap.lastElementChild.innerHTML = Object.keys(Deck).length
+      // statsWrap.lastElementChild.innerHTML = Object.keys(Deck).length
       for (var item in Deck) {
         // console.log(item, "---", Deck[item])
         card = cardTemplate.querySelector(".cards__card__context")

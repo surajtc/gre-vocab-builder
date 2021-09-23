@@ -72,9 +72,6 @@ body {
 .topbar .stats h4:nth-child(3) {
   color: #BF616A;
 }
-.topbar .stats h4:nth-child(4) {
-  color: #D8DEE9;
-}
 .topbar .deck {
   min-width: 32%;
   -webkit-box-pack: end;
@@ -140,8 +137,8 @@ body {
   position: relative;
   background-color: #3B4252;
   color: #E5E9F0;
-  -webkit-transition: border 100ms ease-out;
-  transition: border 100ms ease-out;
+  -webkit-transition: border 100ms ease-out, color 100ms ease-out;
+  transition: border 100ms ease-out, color 100ms ease-out;
   border-top: 0.2em solid #EBCB8B;
   min-height: 6em;
   padding: 0.5em 0;
@@ -208,6 +205,7 @@ body {
   background-color: #667da9;
   color: #2E3440;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   width: 50%;
   height: 3em;
   padding-top: 1em;

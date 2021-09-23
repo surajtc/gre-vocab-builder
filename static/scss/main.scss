@@ -56,12 +56,13 @@ body {
       &:nth-child(3) {
         color: $Ext_R;
       }
-      &:nth-child(4) {
-        color: $Light01;
-      }
+      // &:nth-child(4) {
+      //   color: $Light01;
+      // }
 
       text-align: center;
       background-color: $Dark01;
+      // border: .1em solid $Accent03;
       padding: 0.25em;
       border-radius: 50%;
       margin-inline: 0.25em;
@@ -129,7 +130,7 @@ justify-content: flex-end;
       position: relative;
       background-color: $Dark03;
       color: $Light02;
-      transition: border 100ms ease-out;
+      transition: border 100ms ease-out, color 100ms ease-out;
       border-top: 0.2em solid $Ext_Y;
       // border-bottom: .2em solid gold;
       min-height: 6em;
@@ -186,6 +187,7 @@ justify-content: flex-end;
         background-color: darken($color: $Light01, $amount: 35%);
         color: $Dark04;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
         // background-color: $Ext_R;
         // &:first-child{
         // // color: $Ext_G;
