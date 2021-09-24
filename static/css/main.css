@@ -116,7 +116,7 @@ body {
   gap: 0.5em;
   margin: 0.25em;
   padding-top: 1em;
-  padding-bottom: 2.5em;
+  padding-bottom: 3.5em;
 }
 .cards__card {
   display: -webkit-box;
@@ -234,7 +234,7 @@ body {
 
 .toolbar {
   max-width: 60%;
-  min-height: 2em;
+  min-height: 3em;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -244,7 +244,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 0.5em;
-  border-radius: 1em;
+  border-radius: 1.5em;
   position: fixed;
   z-index: 2;
   display: -webkit-box;
@@ -260,7 +260,7 @@ body {
   color: #667da9;
 }
 .toolbar i {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 0.2em;
   border-radius: 50%;
   -webkit-transition: background-color 200ms ease-out;
@@ -275,6 +275,77 @@ body {
 }
 .toolbar i:active:last-child {
   color: #EBCB8B;
+}
+
+.menu-page {
+  width: 100%;
+  height: calc(100% - 3em);
+  background-color: rgba(46, 52, 64, 0.9);
+  position: fixed;
+  top: 3em;
+  z-index: 3;
+  visibility: hidden;
+  padding: 1em;
+}
+.menu-page h3 {
+  text-align: center;
+  color: #D8DEE9;
+}
+.menu-page .deck-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 2em;
+  padding: 2em 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu-page .deck-list h4 {
+  color: #D8DEE9;
+  display: inline-block;
+  text-align: center;
+  background-color: #4C566A;
+  padding: 0.25em;
+  border-radius: 50%;
+  margin-inline: 0.25em;
+  cursor: pointer;
+}
+.menu-page .deck-list h4:hover {
+  background-color: #EBCB8B;
+  color: #2E3440;
+}
+
+.show-menu {
+  -webkit-animation: showmenu 200ms ease-out forwards;
+          animation: showmenu 200ms ease-out forwards;
+}
+@-webkit-keyframes showmenu {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes showmenu {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .white {

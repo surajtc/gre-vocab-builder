@@ -7,6 +7,24 @@ var DeckNumber = 01
 var OnlyRed = false
 var VisibleAll = false
 
+for (var i = 1; i <= MaxDeckNumber; i++) {
+  document.querySelector(
+    ".deck-list"
+  ).innerHTML += `<h4 onclick = skipDeck(${i})>${String(i).padStart(
+    2,
+    "0"
+  )}</h4>`
+}
+
+function skipDeck(number) {
+  // console.log(number)
+  DeckNumber = number
+  changeDeck()
+  setTimeout(() => {
+    showMenu()
+  }, 500)
+}
+
 function updateStats() {
   stats = document.querySelector(".stats")
   // console.log(stats)
@@ -76,6 +94,10 @@ function hide(elem) {
 
 function deckPath(number) {
   return FolderPath + "Deck" + String(number).padStart(2, "0") + ".csv"
+}
+
+function showMenu() {
+  document.querySelector(".menu-page").classList.toggle("show-menu")
 }
 
 function changeDeck(pos = 0) {
