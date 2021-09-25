@@ -29,7 +29,7 @@ Cheers! Happy Learning :tada:
 
 - [ ] Menu Navigation
 - [ ] Quiz Interface
-- [ ] Add More Decks
+- [X] Add More Decks
 
 ## Attribution
 
