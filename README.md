@@ -1,10 +1,14 @@
 # Vocabulary Builder
 
-:zap: A **console** based vocabulary building application implemented using python
+:zap: A **Console / CLI** based vocabulary building application implemented using python, start [here](#Instructions)
+
+:fire: A responsive web application built using **Javascript**, you can check out [here](https://surajtc.github.io/Vocabulary-Builder/)
 
 ---
 
-## Getting Started
+## Instructions
+
+### Getting Started
 
 Clone this repository and run `main.py` as shown below
 
@@ -18,10 +22,11 @@ python main.py
 
 Note : This application only works with **Python 3.x.x**, and can be used right out of the box - no additional dependencies are required.
 
-## How To Use
+### How To Use
 
 * Run `python main.py` in your preferred terminal emulator to get started.
 * If everything works as expected, A menu is displayed on the console (as shown in the screenshot), just follow the instructions on the prompt which is almost self-explanatory.
+* View [screenshots](#Screenshots)
 
 Cheers! Happy Learning :tada:
 
