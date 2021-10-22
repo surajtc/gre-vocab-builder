@@ -43,7 +43,7 @@ Cheers! Happy Learning :tada:
 Thank you Greg Mat 🙂
 , For more information checkout [gregmat.com](https://www.gregmat.com/).
 
-## Screenshots
+## Screenshots (CLI)
 
 * **Main Menu (left), Deck Selection (right)**
 
