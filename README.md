@@ -2,7 +2,7 @@
 
 :zap: A **Console / CLI** based vocabulary building application implemented using python, start [here](#Instructions)
 
-:fire: A responsive web application built using **Javascript**, you can check out [here](https://surajtc.github.io/Vocabulary-Builder/)
+:fire: A responsive web application built using **Vanilla Javascript**, you can check out [here](https://surajtc.github.io/Vocabulary-Builder/)
 
 ---
 
