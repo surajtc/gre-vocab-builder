@@ -6,7 +6,7 @@
 
 ---
 
-## Instructions/ Guide
+## Instructions
 
 ### Getting Started
 
