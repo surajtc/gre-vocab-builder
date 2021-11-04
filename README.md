@@ -26,7 +26,7 @@ Note : This application only works with **Python 3.x.x**, and can be used right 
 
 * Run `python main.py` in your preferred terminal emulator to get started.
 * If everything works as expected, A menu is displayed on the console (as shown in the screenshot), just follow the instructions on the prompt which is almost self-explanatory.
-* View [screenshots](#Screenshots (CLI))
+* View [screenshots](#Screenshots)
 
 Cheers! Happy Learning :tada:
 
@@ -43,7 +43,7 @@ Cheers! Happy Learning :tada:
 Thank you Greg Mat 🙂
 , For more information checkout [gregmat.com](https://www.gregmat.com/).
 
-## Screenshots (CLI)
+## Screenshots
 
 * **Main Menu (left), Deck Selection (right)**
 
